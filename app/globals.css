@@ -16,7 +16,7 @@
   }
 }
 
-body {
+.header-styling {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -30,4 +30,21 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+.google-btn {
+  background-color: #4285F4;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.google-btn img {
+  margin-right: 10px;
 }

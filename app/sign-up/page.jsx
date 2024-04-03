@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import 'firebase/auth';
 import Link from "next/link";
-import { UserAuth } from "./context/AuthContext";
+import { UserAuth } from "../context/AuthContext";
 
 const SignIn = () => {
   const { user, googleSignIn, logOut } = UserAuth();
@@ -15,13 +15,7 @@ const SignIn = () => {
       console.log(error);
     }
   };
-  useEffect(() => {
-    const checkAuthentication = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 50));
-      setLoading(false);
-    };
-    checkAuthentication();
-  }, [user]);
+
   return (
     <div className="py-16">
       <div className="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
@@ -29,7 +23,7 @@ const SignIn = () => {
              style={{backgroundImage: "url('https://images.unsplash.com/photo-1546514714-df0ccc50d7bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80')"}}>
         </div>
         <div className="w-full p-8 lg:w-1/2">
-          <p className="text-xl text-gray-600 text-center">Welcome back!</p>
+          <p className="text-xl text-gray-600 text-center">Sign Up</p>
 
           <div className="mt-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
@@ -38,12 +32,11 @@ const SignIn = () => {
           <div className="mt-4">
             <div className="flex justify-between">
               <label className="block text-gray-700 text-sm font-bold mb-2">Password</label>
-              <Link href="#" className="text-xs text-gray-500">Forget Password?</Link>
             </div>
             <input className="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" type="password" />
           </div>
           <div className="mt-8">
-            <button className="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600">Login</button>
+            <button className="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600">Create Account</button>
           </div>
           <button onClick={handleSignIn} className="flex items-center justify-center mt-7 text-white rounded-lg shadow-md hover:bg-gray-100">
             <div className="px-10 py-4">
@@ -62,11 +55,11 @@ const SignIn = () => {
                         fill="#1976D2" />
                 </svg>
             </div>
-            <h1 className="px-4 py-3 w-5/6 text-center text-gray-600 font-bold">Sign in with Google</h1>
+            <h1 className="px-4 py-3 w-5/6 text-center text-gray-600 font-bold">Continue with Google</h1>
         </button>
-          <div className="mt-4 flex items-center justify-between">
+          <div className="mt-4">
             <span className="border-b w-1/5 md:w-1/4"></span>
-            <Link href="/sign-up" className="text-xs text-gray-500 uppercase">or goto signup</Link>
+            <Link href="/" className="text-xs text-gray-500 uppercase">Already have an account? Sign in</Link>
             <span className="border-b w-1/5 md:w-1/4"></span>
           </div>
         </div>
