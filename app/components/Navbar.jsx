@@ -8,18 +8,11 @@ const Navbar = () => {
   const [loading, setLoading] = useState(true);
   const router = useRouter()
 
-  const handleSignIn = async () => {
-    try {
-      await googleSignIn();
-      router.push('/')
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   const handleSignOut = async () => {
     try {
       await logOut();
+      router.push('/')
     } catch (error) {
       console.log(error);
     }
