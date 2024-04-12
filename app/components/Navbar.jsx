@@ -4,31 +4,33 @@ import { UserAuth } from "../context/AuthContext";
 import { useRouter } from 'next/navigation'
 
 const Navbar = () => {
-  const { user, googleSignIn, logOut } = UserAuth();
+  const { user, logOut } = UserAuth();
   const [loading, setLoading] = useState(true);
   const router = useRouter()
+  const isAuth =localStorage.getItem("isAuth")
 
 
   const handleSignOut = async () => {
     try {
       await logOut();
-      router.push('/')
+      router.push('/login')
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
-    const checkAuthentication = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 50));
+      if (!user && !isAuth) {
+        router.push("/login");
+      } else {
       setLoading(false);
-    };
-    checkAuthentication();
-  }, [user]);
+      }
+    
+  }, [user,router]);
     // console.log(user)
   return (
     <div className="header-styling h-20 w-full border-b-2 flex items-center justify-between p-2">
-        {!user ? null : (
+        {!isAuth ? null : (
       <ul className="flex">
         <li className="p-2 cursor-pointer">
           <Link href="/">Home</Link>

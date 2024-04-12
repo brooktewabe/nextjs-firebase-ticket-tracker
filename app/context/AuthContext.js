@@ -14,11 +14,18 @@ export const AuthContextProvider = ({ children }) => {
 
   const googleSignIn = () => {
     const provider = new GoogleAuthProvider();
-    signInWithPopup(auth, provider);
+    signInWithPopup(auth, provider).then((result)=>{
+      localStorage.setItem("isAuth", true);
+      const storage = localStorage.getItem("isAuth");
+      if (!storage) {
+        router("/");
+      }
+    })
   };
 
   const logOut = () => {
     signOut(auth);
+    localStorage.removeItem("isAuth")
   };
 
   useEffect(() => {
