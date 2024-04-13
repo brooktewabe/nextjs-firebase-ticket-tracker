@@ -1,7 +1,11 @@
+'use client'
 import React from 'react'
+import withAuth from './withAuth'
 
-export default function Home() {
+function Home() {
   return (
     <div>Home</div>
   )
 }
+
+export default withAuth(Home)

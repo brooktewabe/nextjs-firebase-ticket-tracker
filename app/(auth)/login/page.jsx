@@ -32,7 +32,7 @@ const SignIn = () => {
       console.log(error);
     }
   };
-
+console.log(process.env.REACT_APP_FIREBASE_API_KEY)
   const handleChange = (e) => {
     const { name, value } = e.target;
 

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { UserAuth } from "../context/AuthContext";
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation';
+
 
 const Navbar = () => {
   const { user, logOut } = UserAuth();
