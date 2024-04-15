@@ -32,7 +32,6 @@ const SignIn = () => {
       console.log(error);
     }
   };
-console.log(process.env.REACT_APP_FIREBASE_API_KEY)
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -51,6 +50,7 @@ console.log(process.env.REACT_APP_FIREBASE_API_KEY)
 
       const user = userCredential.user;
       localStorage.setItem("isAuth", true);
+      // localStorage.setItem('user',JSON.stringify(userDetail))
       router.push("/");
     } catch (err) {
       const errorMessage = err.message;
