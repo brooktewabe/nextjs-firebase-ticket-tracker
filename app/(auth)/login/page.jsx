@@ -129,7 +129,7 @@ const SignIn = () => {
             <button
               type="submit"
               onClick={handleSubmit}
-              className="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600"
+              className="bg-gray-700 justify-center text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600"
             >
               Login
             </button>
