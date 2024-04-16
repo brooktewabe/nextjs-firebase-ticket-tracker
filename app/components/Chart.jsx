@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import Chart from 'react-apexcharts';
+import dynamic from "next/dynamic";
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
+
+
 
 const Donut = () => {
   const [options] = useState({
@@ -10,7 +13,7 @@ const Donut = () => {
   return (
     <>
       <div className="donut">
-        <Chart options={options} series={series} type="pie" width="380" />
+        <Chart options={options} series={series} type="pie" width="380" height="380" />
         {/* <Chart options={options} series={series} type="donut" width="380" /> */}
       </div>
     </>
