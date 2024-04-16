@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useState } from "react";
 import { sendPasswordResetEmail, getAuth } from "firebase/auth";
 
@@ -26,9 +26,13 @@ const ResetPassword = () => {
     <div className="py-16">
       <div className="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
         <div className="w-full p-8">
-          <p className="text-xl text-gray-600 text-center">Reset Your Password</p>
+          <p className="text-xl text-gray-600 text-center">
+            Reset Your Password
+          </p>
           {emailSent ? (
-            <p className="text-green-500 text-center mb-4">Password reset email sent. Check your inbox.</p>
+            <p className="text-green-500 text-center mb-4">
+              Password reset email sent. Check your inbox.
+            </p>
           ) : (
             <form onSubmit={handleSubmit}>
               <div className="mt-4">

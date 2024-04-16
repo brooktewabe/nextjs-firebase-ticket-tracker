@@ -76,9 +76,7 @@ const SignIn = () => {
           );
           break;
         case "auth/missing-password":
-          setErrorMessage(
-            "Password is required."
-          );
+          setErrorMessage("Password is required.");
           break;
         default:
           setErrorMessage(errorMessage);
@@ -90,9 +88,7 @@ const SignIn = () => {
   return (
     <div className="py-16">
       <div className="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
-        <div
-          className="hidden lg:block lg:w-1/4 bg-cover">
-        </div>
+        <div className="hidden lg:block lg:w-1/4 bg-cover"></div>
         <div className="w-full p-8 lg:w-1/2">
           <p className="text-xl text-gray-600 text-center">Welcome back!</p>
           <div className="mt-4">

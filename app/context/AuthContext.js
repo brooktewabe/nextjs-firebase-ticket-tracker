@@ -14,7 +14,7 @@ export const AuthContextProvider = ({ children }) => {
 
   const googleSignIn = () => {
     const provider = new GoogleAuthProvider();
-    signInWithPopup(auth, provider).then((result)=>{
+    signInWithPopup(auth, provider).then((result) => {
       localStorage.setItem("isAuth", true);
       const storage = localStorage.getItem("isAuth");
       if (!storage) {

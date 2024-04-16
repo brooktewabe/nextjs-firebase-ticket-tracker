@@ -24,7 +24,7 @@ const withAuth = (WrappedComponent) => {
     }, [router, user]);
 
     if (loading || redirecting) {
-      return <div><Spinner/></div>;
+      return <div><Spinner /></div>;
     }
 
     return <WrappedComponent {...props} />;
