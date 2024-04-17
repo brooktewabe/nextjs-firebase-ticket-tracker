@@ -1,8 +1,8 @@
-## Next js
-## Firebase Auth
-## Postgres db
+### Next js
+### Firebase Auth
+### Postgres db
 
-## Backend: https://github.com/brooktewabe/NestJs-Ticket-Tracker-API
+### Backend: https://github.com/brooktewabe/NestJs-Ticket-Tracker-API
 
 
 
