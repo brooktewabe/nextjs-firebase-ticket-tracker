@@ -20,7 +20,7 @@ function CreateForm() {
 
     const newTicket = { title, body, priority, user_email: user.email };
 
-    const res = await fetch("http://localhost:4000/tickets", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/tickets`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newTicket),

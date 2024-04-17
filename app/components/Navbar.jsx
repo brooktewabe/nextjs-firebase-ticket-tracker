@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { UserAuth } from "../context/AuthContext";
 import { useRouter } from "next/navigation";
+import { BiLogOut } from "react-icons/bi";
 import Image from "next/image";
 import Logo from "./dojo-logo.png";
 
@@ -59,10 +60,10 @@ const Navbar = () => {
             </li>
           </ul>
           <div>
-            <p>Welcome, {user.displayName}</p>
-            <p className="cursor-pointer" onClick={handleSignOut}>
-              Sign out
-            </p>
+            {/* <p>Welcome, {user.displayName}</p> */}
+            <button className="btn-primary cursor-pointer flex" onClick={handleSignOut}>
+            <BiLogOut />Logout
+            </button>
           </div>
         </>
       )}

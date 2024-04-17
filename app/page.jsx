@@ -9,7 +9,7 @@ function Home() {
 
   useEffect(() => {
     async function fetchTickets() {
-      const res = await fetch("http://localhost:4000/tickets");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/tickets`);
       const data = await res.json();
       // display recent ones
       setTickets(data.reverse().slice(0, 3));
