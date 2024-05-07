@@ -1,6 +1,8 @@
-### Next js
-### Firebase Auth
-### Postgres db
+### Nextjs firebase ticket tracker
+
+- Next js
+- Firebase Auth
+- Postgres db
 
 ### Backend: https://github.com/brooktewabe/NestJs-Ticket-Tracker-API
 
