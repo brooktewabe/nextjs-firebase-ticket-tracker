@@ -7,7 +7,7 @@
 ### Backend: https://github.com/brooktewabe/NestJs-Ticket-Tracker-API
 Demo screenshot <br/>
 ![Demo](public/Screenshot%20(46).png)</br>
-Demo screenshot <br/>
+
 ![Demo](public/Screenshot%20(47).png)
 
 
