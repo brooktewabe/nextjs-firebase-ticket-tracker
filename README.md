@@ -8,7 +8,7 @@
 Demo screenshot <br/>
 ![Demo](public/Screenshot%20(46).png)</br>
 Demo screenshot <br/>
-![Demo](public/Screenshot%20(47).png)<>br
+![Demo](public/Screenshot%20(47).png)
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
